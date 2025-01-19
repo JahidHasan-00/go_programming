@@ -41,10 +41,24 @@ func main() {
 	var student string
 	student = "Jhon"
 
-	fmt.Println(student)
+	fmt.Println(student, "\n")
 
 	// //Since := is used outside of a function, running the program results in an error:
 	// fmt.Println(x) //.\variable-datatype.go:6:1: syntax error: non-declaration statement outside function body
+
+	/**Go Multiple Variable Declaration:
+	  --> In Go, it is possible to declare multiple variables on the same line.
+	  -- example below:
+	*/
+	var num1, num2, num3, num4 int = 9, 8, 7, 6 //int --> type
+	fmt.Println(num1, num2, num3, num4)
+
+	//Note: If you use the type(int, float32, string, bool) keyword, it is only possible to declare one type of variable per line.
+	// var z string = true;
+
+	//If the type keyword is not specified, you can declare different types of variables on the same line
+	var myAge, myName, programmer = 26, "Jahid Hasan", true
+	fmt.Println(myAge, myName, programmer)
 
 }
 
