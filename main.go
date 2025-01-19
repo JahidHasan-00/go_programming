@@ -1,5 +1,4 @@
 package main // Package main: must package main.go file --> main
-
 import "fmt" // fmt => format
 
 func main() {
