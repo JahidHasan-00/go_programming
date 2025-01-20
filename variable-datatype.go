@@ -4,6 +4,9 @@ import "fmt"
 
 // x := 1;
 
+const myVar1 int = 100
+const PI = 3.1416
+
 func main() {
 	/**
 	int
@@ -60,8 +63,46 @@ func main() {
 	var myAge, myName, programmer = 26, "Jahid Hasan", true
 	fmt.Println(myAge, myName, programmer)
 
-}
+	//Go Variable Declaration in a Block
+	var (
+		myDailyUsedPro     = 5
+		myDailyWalking     int
+		myDailyUsedProName = "Laptop, Mobile, T-Shirt"
+	)
 
-// func main() {
-// 	fmt.Print("Hello World")
-// }
+	fmt.Print("\n")
+	fmt.Println(myDailyUsedPro)
+	fmt.Println(myDailyWalking)
+	fmt.Println(myDailyUsedProName)
+
+	/**Constants: Unchangeable and Read-only
+	   ---> When a constant is declared, it is not possible to change the value later
+	**/
+	const A1 = 10.5
+	// A1 = 10 //Can not Assign 10. When a constant is declared, it is not possible to change the value later
+	// fmt.Println(A1) //Output: Error
+	fmt.Println(myVar1) //myVar1 declared outside of top of the function
+	fmt.Println(PI)     //PI declared outside of the function
+
+	// Multiple Constants Declaration:
+	const (
+		phoneName = "iPhone"
+		brand     = "Apple"
+		cost      = 120000
+	)
+
+	fmt.Println(phoneName, brand, cost)
+
+	//If we want to add a space between string arguments, we need to use " " inside fmt.Print() function:
+	const i, j = 880, "Bangladesh"
+	fmt.Print(i, " ", j)
+	fmt.Printf("\n")
+	/**The Printf() Function:
+	   --> The Printf() function first formats its argument based on the given formatting verb and then prints them.
+	   -->Here we will use two formatting verbs:
+			%v is used to print the value of the arguments
+			%T is used to print the type of the arguments
+	**/
+	fmt.Printf("i has value of : %v and i has type of : %T \n", i, i)
+	fmt.Printf("j has value of : %v and j has type of : %T \n", j, j)
+}
