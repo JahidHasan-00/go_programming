@@ -105,4 +105,25 @@ func main() {
 	**/
 	fmt.Printf("i has value of : %v and i has type of : %T \n", i, i)
 	fmt.Printf("j has value of : %v and j has type of : %T \n", j, j)
+
+	/**Formatting Verbs for Printf(). Go offers several formatting verbs that can be used with the Printf() function.
+	   General Formatting Verbs:
+	    The following verbs can be used with all data types:
+			--> %v  Prints the value in the default format
+			--> %#v	Prints the value in Go-syntax format
+			--> %T	Prints the type of the value
+			--> %%	Prints the % sign
+	**/
+
+	var test = 10.2
+	var text = "Hello World!"
+	fmt.Printf("%v %v \n", test, text)
+	fmt.Printf("%#v %#v \n", test, text)
+	fmt.Printf("%T %T \n", test, text)
+	fmt.Printf("%v%% \n", test)
+
+	//How to Reassign Value in Variable ( := ) :
+	reassign := true
+	reassign = false
+	fmt.Println(reassign)
 }
