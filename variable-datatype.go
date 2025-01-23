@@ -21,7 +21,7 @@ func main() {
 	d := false          //type is inferred
 
 	fmt.Println(a)
-	fmt.Print(b)
+	fmt.Print(b, "\n")
 	fmt.Println(50)
 	fmt.Println(c)
 	fmt.Println(d)
