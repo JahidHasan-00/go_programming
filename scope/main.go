@@ -2,8 +2,7 @@ package main
 
 import (
 	"fmt"
-
-	"example.com/mathlib"
+	"mathlib/mathlib"
 )
 
 // Global Scope
@@ -13,7 +12,7 @@ var (
 )
 
 func main() {
-	fmt.Println("This is the main function and this is the local scope")
+	fmt.Println("This is the main function body and this is the local scope")
 	add(num1, num2)
 	fmt.Println("Showing Custom Package")
 	mathlib.Multiplication(num1, num2)

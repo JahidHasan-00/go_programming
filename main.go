@@ -1,5 +1,8 @@
 package main // Package main: must package main.go file --> main
-import "fmt" // fmt => format
+import (
+	"fmt"
+) // fmt => format
+// mathlib => mathlib
 
 func main() {
 	fmt.Println("Hello World")

@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 func add(a int, b int) {
-	println(a + b)
+	fmt.Println(a + b)
 }
