@@ -20,19 +20,22 @@ func multiplier(factor int) func(int) int {
 	}
 }
 
-func main() {
-	result := add(10, 20)
+func calculate() int {
+	return add(10, 20)
+}
 
-	result1 := multiplier(5)
-	fmt.Println(result1(5))
+func main() {
+	//Calling a named function
+	result := multiplier(5)
+	fmt.Println(result(5))
 
 	//Anonymous Function
 	//IIFE (Immediately Invoked Function Expression)
 	func(res int) {
 		fmt.Println("Sum of those values: ", res)
-	}(result)
+	}(calculate())
 
-	//Assigning an anonymous function to a variable
+	//Assigning an anonymous function to a variable or function expression
 	greet := func(name string) {
 		fmt.Println("Hello, ", name)
 	}
@@ -40,6 +43,7 @@ func main() {
 	greet("Doe")
 }
 
+//Executing init() function before main()
 func init() {
 	fmt.Println("I'll be execute first")
 }
