@@ -2,15 +2,38 @@ package main
 
 import "fmt"
 
+//Pass By Value
+//Pass By Reference
+
+type User struct {
+	Name   string
+	Age    int
+	Salary int
+}
+
+func printInstance(profile *User) {
+
+	fmt.Println(profile)
+
+}
+
+func print(numbers *[3]int) {
+
+	fmt.Println(numbers[1])
+
+}
+
 func main() {
-	//pointer or memory address
-	x := 20
-	fmt.Println(x)
+	arr := [3]int{4, 5, 6}
+	print(&arr)
 
-	p := &x //ampersand & => address of
-	*p = 40
+	person := User{
+		Name:   "Habibur",
+		Age:    30,
+		Salary: 500000,
+	}
 
-	fmt.Println(x)
-	// fmt.Println("Address:", p)               //now p is the address of x
-	// fmt.Println("Value at the address:", *p) // ( * ) value of address
+	p := &person
+
+	printInstance(p)
 }
