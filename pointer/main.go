@@ -6,14 +6,16 @@ import "fmt"
 //Pass By Reference
 
 type User struct {
-	Name   string
-	Age    int
-	Salary int
+	Name    string
+	Age     int
+	Salary  float32
+	favFood [3]string
 }
 
 func printInstance(profile *User) {
 
 	fmt.Println(profile)
+	fmt.Println(profile.Name)
 
 }
 
@@ -36,4 +38,16 @@ func main() {
 	p := &person
 
 	printInstance(p)
+	printInstance(&person)
 }
+
+/***
+	##Compilation Phase:
+
+		Code Segment:
+			User = type User Struct
+			printInstance = func(){....}
+			print = func (){...}
+			main = func(){...}
+
+***/
