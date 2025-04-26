@@ -41,5 +41,5 @@ func main() {
 	1. slice from existing array
 	2. slice from slice
 	3. slice literal
-	4. slice make()
+	4. slice make() with length
 ***/
